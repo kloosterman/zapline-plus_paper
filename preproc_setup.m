@@ -6,7 +6,7 @@ if ismac
   backend = 'local';
   compile = 'no';
 else
-  basepath = '/home/mpib/kloosterman/projectdata/zapline-plus';
+  basepath = '/mnt/beegfs/home/kloosterman/projectdata/zapline-plus';
   backend = 'slurm';
   compile = 'no';
 end
