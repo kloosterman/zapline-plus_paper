@@ -7,7 +7,7 @@ if ismac
   compile = 'no';
 else
   basepath = '/home/mpib/kloosterman/projectdata/zapline-plus';
-  backend = 'slurm';
+  backend = 'backend';
   compile = 'no';
 end
 stack = 1;
