@@ -2,22 +2,22 @@
 
 % restoredefaultpath
 if ismac
-    basepath = '/Users/kloosterman/Dropbox/tardis_code/MATLAB'; % local
+    basepath = '/Users/kloosterman/Documents/GitHub'; % /zapline-plus_paper
     backend = 'none'; % local torque
-    addpath(fullfile(basepath, 'tools', 'custom_tools'))
-    addpath(genpath(fullfile(basepath, 'tools/custom_tools/plotting')))
-    addpath(fullfile(basepath, 'tools/custom_tools/stats'))
+%     addpath(fullfile(basepath, 'tools', 'custom_tools')) % needed?
+    addpath(genpath(fullfile(basepath, 'plotting-tools')))
+    addpath(fullfile(basepath, 'stats-tools'))
 else
-    basepath = '/mnt/beegfs/home/kloosterman/MATLAB'; % on the cluster
-    addpath(fullfile(basepath, 'tools'))
+    basepath = '/home/mpib/kloosterman/GitHub'; % on the cluster
+%     addpath(fullfile(basepath, 'tools'))
     backend = 'slurm'; % local torque slurm
 end
-addpath(fullfile(basepath, 'tools', 'fieldtrip')) % cloned on 13 09 19
-ft_defaults
+addpath(fullfile(basepath, 'zapline-plus_paper')) 
 addpath(fullfile(basepath, 'zapline-plus')) 
-addpath(fullfile(basepath, 'tools', 'zapline-plus')) 
-addpath(fullfile(basepath, 'tools/qsub_tardis_slurmpreview'))
-addpath(fullfile(basepath, 'tools', 'NoiseTools')) 
+addpath(fullfile(basepath, 'fieldtrip')) 
+ft_defaults
+addpath(fullfile(basepath, 'qsub-tardis'))
+% addpath(fullfile(basepath, 'tools', 'NoiseTools')) 
 
 %% preprocessing
 preproc_setup()
