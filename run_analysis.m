@@ -8,7 +8,7 @@ if ismac
     addpath(genpath(fullfile(basepath, 'plotting-tools')))
     addpath(fullfile(basepath, 'stats-tools'))
 else
-    basepath = '/home/mpib/kloosterman/GitHub'; % on the cluster
+    basepath = '/mnt/beegfs/home/kloosterman/GitHub'; % on the cluster
 %     addpath(fullfile(basepath, 'tools'))
     backend = 'slurm'; % local torque slurm
 end
