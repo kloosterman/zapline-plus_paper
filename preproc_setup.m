@@ -81,7 +81,6 @@ else
 end
 
 setenv('TORQUEHOME', 'yes')
-mkdir('~/qsub'); cd('~/qsub');
 if strcmp(compile, 'yes')
   ft_hastoolbox('ctf', 1); % for loading ctf data
   ft_hastoolbox('eeglab', 1); % for ica
@@ -97,6 +96,8 @@ if strcmp(backend, 'local')
   return
 end
 
+mkdir('/mnt/beegfs/home/kloosterman/qsub'); 
+cd('/mnt/beegfs/home/kloosterman/qsub');
 qsubcellfun(fun2run, cfglist, 'memreq', memreq*1e6, 'timreq', timreq*60, 'stack', stack, ...
   'StopOnError', false, 'backend', backend, 'options', options);
 
