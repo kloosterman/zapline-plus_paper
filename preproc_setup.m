@@ -20,14 +20,14 @@ linenoise_rem = 'zapline-plus'; % bandstop zapline zapline-plus DFT
 datasets = {'MEG_Hagoort' 'CamCan'};
 cfglist = {};
 
-for idata = 1:2
+for idata = 1 %:2
   datapath = fullfile(basepath, datasets{idata});
   
   PREIN = fullfile(datapath, 'raw');
   % PREOUT = fullfile(basepath, 'preproczap');
   % PREOUT = fullfile(basepath, 'preproczap-plus');
   % PREOUT = fullfile(basepath, 'preprocDFT');
-  PREOUT = fullfile(datapath, sprintf('preproc_%s_50Hz', linenoise_rem));
+  PREOUT = fullfile(datapath, sprintf('preproc_%s_50Hz_nkeep90', linenoise_rem));
   
   mkdir(PREOUT)
   mkdir(fullfile(PREOUT, 'figures'))

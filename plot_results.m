@@ -1,23 +1,9 @@
 %% load data
 
-% PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/MEG_Hagoort/preproc_zapline-plus_anyfreq';
-% cd(PREIN)
-% 
-% subjlist = dir('*50Hz.mat');
-% 
-% clear results
-% for isub = 1:length(subjlist)
-%   load(subjlist(isub).name)
-%   disp(subjlist(isub).name)
-%   results(isub).analyticsResults = analyticsResults;
-%   results(isub).config = zaplineConfig;
-%   clear analyticsResults zaplineConfig
-% end
-
-PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/CamCan/preproc_zapline-plus_anyfreq';
+PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/MEG_Hagoort/preproc_zapline-plus_50Hz';
 cd(PREIN)
 
-subjlist = dir('*XXHz.mat');
+subjlist = dir('*50Hz.mat');
 
 clear results
 for isub = 1:length(subjlist)
@@ -28,12 +14,26 @@ for isub = 1:length(subjlist)
   clear analyticsResults zaplineConfig
 end
 
+% PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/CamCan/preproc_zapline-plus_anyfreq';
+% cd(PREIN)
+% 
+% subjlist = dir('*XXHz.mat');
+% 
+% clear results
+% for isub = 1:length(subjlist)
+%   load(subjlist(isub).name)
+%   disp(subjlist(isub).name)
+%   results(isub).analyticsResults = analyticsResults;
+%   results(isub).config = zaplineConfig;
+%   clear analyticsResults zaplineConfig
+% end
+
 % % load results_SR
 % load /Users/kloosterman/Dropbox/tardis_code/MATLAB/zapline-plus/results_donders/results_donders.mat
 
 
-% titleprefix = 'MEG study I, '; % also adapt the export at the bottom!
-titleprefix = 'MEG study II, '; % also adapt the export at the bottom!
+titleprefix = 'MEG study I, '; % also adapt the export at the bottom!
+% titleprefix = 'MEG study II, '; % also adapt the export at the bottom!
 
 %% process
 spec_raw = [];
@@ -137,6 +137,6 @@ set(gca, 'Position', pos);
 
 %% export
 
-export_fig(gcf, 'MEG_study-I', '-png', '-tif', '-eps', '-pdf', '-p0.05', '-a4', '-q101', '-transparent')
+% export_fig(gcf, 'MEG_study-I', '-png', '-tif', '-eps', '-pdf', '-p0.05', '-a4', '-q101', '-transparent')
 
-saveas(gcf, 'MEG_study-II.tif')
+saveas(gcf, 'MEG_study-I.tif')
