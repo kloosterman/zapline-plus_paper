@@ -27,7 +27,7 @@ for idata = 1 %:2
   % PREOUT = fullfile(basepath, 'preproczap');
   % PREOUT = fullfile(basepath, 'preproczap-plus');
   % PREOUT = fullfile(basepath, 'preprocDFT');
-  PREOUT = fullfile(datapath, sprintf('preproc_%s_50Hz_nkeep90', linenoise_rem));
+  PREOUT = fullfile(datapath, sprintf('preproc_%s_50Hz_minChunkLength60', linenoise_rem));
   
   mkdir(PREOUT)
   mkdir(fullfile(PREOUT, 'figures'))

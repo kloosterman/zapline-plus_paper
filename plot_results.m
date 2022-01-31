@@ -1,6 +1,7 @@
 %% load data
 
-PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/MEG_Hagoort/preproc_zapline-plus_50Hz';
+% PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/MEG_Hagoort/preproc_zapline-plus_50Hz';
+PREIN = '/Users/kloosterman/gridmaster2012/projectdata/zapline-plus/MEG_Hagoort/preproc_zapline-plus_50Hz_minChunkLength60';
 cd(PREIN)
 
 subjlist = dir('*50Hz.mat');
